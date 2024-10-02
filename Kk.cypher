@@ -1,0 +1,12 @@
+CREATE (QuickSort:Algorithm {name: "QuickSort", complexity: "O(n log n)"})
+CREATE (MergeSort:Algorithm {name: "MergeSort", complexity: "O(n log n)"})
+CREATE (BubbleSort:Algorithm {name: "BubbleSort", complexity: "O(n^2)"})
+CREATE (TimeComplexity:Concept {name: "Time Complexity"})
+CREATE (Performance:Concept {name: "Performance"})
+
+CREATE (QuickSort)-[:HAS_COMPLEXITY]->(TimeComplexity)
+CREATE (MergeSort)-[:HAS_COMPLEXITY]->(TimeComplexity)
+CREATE (BubbleSort)-[:HAS_COMPLEXITY]->(TimeComplexity)
+CREATE (QuickSort)-[:IMPACTS]->(Performance)
+CREATE (MergeSort)-[:IMPACTS]->(Performance)
+CREATE (BubbleSort)-[:IMPACTS]->(Performance)
